@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+Hola {{ user.email }},
+
+Gracias por registrarte en la web
+
+Por favor da clic en el siguiente link para confirmar el registro
+
+http://{{ domain }}{% url 'activate' uid=uid token=token %}
+
+{% endautoescape %}
